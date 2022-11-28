@@ -29,7 +29,7 @@ $rows_tipo = $lista_tipos->fetch_all();
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class=" navbar-brand">
-                    <img src="images/logo-chuleta.png" alt="Logotipo Chuleta Quente">
+                    <img src="images/logo.png" alt="Logotipo Gauchão">
                 </a>
             </div> 
             <!-- fecha agrupamento mobile -->

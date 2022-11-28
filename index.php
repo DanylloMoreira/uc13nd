@@ -8,7 +8,7 @@
     <!-- link para CSS bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- link para css personalizado/proprio -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 
     <title>Sistema produtos</title>
 </head>
@@ -49,6 +49,6 @@
                     });
                 </script>
                 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+                <script src="js/bootstrap.min.js"></script>
 
 </html>
