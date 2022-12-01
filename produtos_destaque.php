@@ -19,7 +19,7 @@ $num_linhas = $lista->num_rows;
         <div class="col-sm-6 col-md-4">
         <div class="thumbnail"> <!-- Abre thumbnail/card -->
             <a href="produto_detalhe.php?id_produto=<?php echo $row_destaque['id_produto']; ?>">
-                <img src="images/" alt="<?php echo $row_destaque['imagem_produto']; ?>"
+                <img src="images/<?php echo $row_destaque['imagem_produto']; ?>" alt=""
                 class="img-reponsive img-rounded" style="height: 20em;">
             </a>
             <div class="caption text-right">
@@ -42,7 +42,7 @@ $num_linhas = $lista->num_rows;
                     </a>
                 </p>
             </div>
-        </div> <!-- fechathumbnail/card -->
+        </div> <!-- fechar thumbnail/card -->
         </div>
         <?php } while($row_destaque = $lista->fetch_assoc())?>  <!--final da estrutura de repetição-->
     </div>

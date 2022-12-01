@@ -10,7 +10,7 @@
         <!-- Área de localização -->
         <div class="col-sm-6 col-md-4">
             <div class="panel-footer" style="background: none;">
-                <img src="images/.jpg" alt="">
+                <img src="images/logo.png" alt="">
                 <br>
                 <i>O Melhor Churrasco da ZL de São Paulo</i>
                 <address>
@@ -126,7 +126,7 @@
         <div class="col-sm-12">
             <div class="panel-footer" style="background: none;">
                 <h6 class="text-danger text-center">
-                    Desenvolvido por Guiverme; 2022
+                    Desenvolvido por Danyllo Moreira; 2022
                     <br>
                     <a href="http://www.gamerzone.com.br" target="_blank">
                         gamerzone.com.br
