@@ -72,7 +72,7 @@ $rows_tipo = $lista_tipos->fetch_all();
                     </form>
                     <!-- final fomulário de busca -->
                     <li class="ative">
-                        <a href="adimi/index.php">
+                        <a href="admin/index.php">
                             <span class="glyphicon glyphicon-user">&nbsp;ADMIN</span>
                         </a>
                     </li>
