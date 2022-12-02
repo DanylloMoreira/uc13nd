@@ -24,7 +24,9 @@
         <a name="destaques">&nbsp;</a>
         <?php include 'produtos_destaque.php'; ?>
         <!-- Area dos produtors em geral -->
-        <?php include 'produtos_geral.php'; ?>
+         <a name="produtos">&nbsp;</a>
+         <?php include 'produtos_geral.php'; ?>
+       
 
         <!-- Rodapé -->
         <footer class="painel-footer" style="background: none;">
