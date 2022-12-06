@@ -4,10 +4,11 @@ include "../conn/connect.php";
 if($_POST){
     $login = $_POST['login_usuario'];
     $senha = $_POST['senha_usuario'];
+    // echo $login . " -" .$senha;
     $loginRes = $conn->query("select * from tbusuarios where login_usuario='$login' and senha_usuario = md5('$senha')");
     $rowLogin = $loginRes->fetch_assoc();
     // $numRow = $loginRes->num_rows;
-    $numRow = $loginRes->num_rows;
+    $numRow = mysqli_num_rows($loginRes);
 
     // se a sessão não existir
     if(!isset($_SESSION)){
@@ -16,18 +17,25 @@ if($_POST){
         $session_name_new = session_name();
     }
     if($numRow > 0){
-        $_SESSION['login_usuario'] =$login;
+        $_SESSION['login_usuario'] = $login;
         $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
-        $_SESSION['nome_da_sessao'] = $session_name();
+        $_SESSION['nome_da_sessao'] = session_name();
+        if($rowLogin['nivel_usuario'] =='sup') {
+            echo "<script>window.open('index.php','_self')</script>";
+        } elseif ($rowLogin['nivel_usuario']=='com') {
+            echo "<script>window.open('../client/index.php','_self')</script>";
+        }
+        }else{
+            echo "<script>window.open('invasor.php','_self')</script>";
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="reflesh" content="30;URL=../index.php">
+    <meta http-equiv="reflesh" content="150;URL=../index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css"> 
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script> 
