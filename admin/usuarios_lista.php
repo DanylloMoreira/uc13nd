@@ -42,7 +42,15 @@ $nrows = $lista->num_rows;
                             <span class="hidden-xs"><?php echo $row['login_usuario']?></span>
                         </td>
                         <td>
-                            <?php echo $row['nivel_usuario'];?>
+                             
+                             <?php 
+                                if ($row['nivel_usuario']=='sup') {
+                                    echo '<span class="glyphicon glyphicon-link text-danger" aria-hidden="true"></span>';
+                                }else {
+                                    echo '<span class="glyphicon glyphicon-globe text-info" aria-hidden="true"></span>';
+                                }
+                            ?>
+                            <?php echo $row['nivel_usuario']?>
                         </td>
                         <td>
                             <a href="usuarios_atualiza.php?login_usuario=<?php echo $row['senha_usuario']; ?>" class="btn btn-warning btn-block btn-xs">
