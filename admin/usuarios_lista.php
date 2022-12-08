@@ -23,10 +23,9 @@ $nrows = $lista->num_rows;
             <thead>
                 <th class="hidden">ID</th>
                 <th>LOGIN USUARIO</th>
-                <th>SENHA USUARIO</th>
                 <th>NIVEL USUARIO</th>
                 <th>
-                    <a href="produtos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
+                    <a href="usuarios_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         <span class="hidden-xs">ADICIONAR</span>
                     </a>
@@ -41,17 +40,6 @@ $nrows = $lista->num_rows;
                         <td>
                             <span class="visible-xs"><?php echo $row['senha_usuario']?></span>
                             <span class="hidden-xs"><?php echo $row['login_usuario']?></span>
-                        </td>
-                        <td>
-                             
-                             <?php 
-                                if ($row['login_usuario']=='Sim') {
-                                    echo '<span class="glyphicon glyphicon-heart text-danger" aria-hidden="true"></span>';
-                                }else {
-                                    echo '<span class="glyphicon glyphicon-ok text-info" aria-hidden="true"></span>';
-                                }
-                            ?>
-                            <?php echo $row['senha_usuario']?>
                         </td>
                         <td>
                             <?php echo $row['nivel_usuario'];?>
@@ -111,7 +99,7 @@ $nrows = $lista->num_rows;
         var id = $(this).data('id'); // busca o id (data-id)
         // console.log(id + '-' + nome); // exibe no console
         $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','produtos_excluir.php?id_produto='+id); // chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','usuarios_excluir.php?id_usuario='+id); // chama o arquivo php para excluir o usuario
         $('#modalEdit').modal('show');// chamar o modal
     });
 </script>

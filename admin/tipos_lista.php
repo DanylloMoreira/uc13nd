@@ -22,9 +22,10 @@ $nrows = $lista->num_rows;
         <table class="table table-hover table-condensed tb-opacidade">
             <thead>
                 <th class="hidden">ID</th>
+                <th>SIGLA</th>
                 <th>TIPOS</th>
                 <th>
-                    <a href="produtos_insere.php" target="_self" class="btn btn-block btn-primary" role="button">
+                    <a href="tipos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         <span class="hidden-xs">ADICIONAR &nbsp;</span>
                     </a>
@@ -38,19 +39,19 @@ $nrows = $lista->num_rows;
                     <tr>
                         <td class="hidden"><?php echo $row['id_tipo']; ?></td>
                         <td>
-                            <span class="hidden-xs"><?php echo $row['rotulo_tipo'] ?></span>
+                        <span class="glyphicon glyphicon text-danger" aria-hidden="true"></span>
+                            <?php echo $row['sigla_tipo']?>
                         </td>
                         <td>
-                            <a href="lista_atualiza.php?id_tipo=<?php echo $row['id_tipo']?>" role="button" class="btn btn-warning btn-block">
+                            <?php echo $row['rotulo_tipo'] ?>
+                        </td>
+                        <td>
+                            <a href="tipos_atualiza.php?id_tipo=<?php echo $row['id_tipo']?>" role="button" class="btn btn-warning btn-block">
                                 <span class="hidden-xs">ALTERAR</span>
                                 <span class="glyphicon glyphicon-refresh"></span>
                             </a>
                             <br>
-                            <button
-                            data-nome="<?php echo $row['rotulo_tipo']?>"
-                            data-id="<?php echo $row['id_tipo']?>"
-                            class="delete btn btn-block btn-danger"
-                            >
+                            <button data-nome="<?php echo $row['sigla_tipo']?>"data-id="<?php echo $row['id_tipo']?>"class="delete btn btn-block btn-danger">
                                 <span class="hidden-xs">EXCLUIR</span>
                                 <span class="glyphicon glyphicon-trash"></span>
                             </button>
@@ -94,7 +95,7 @@ $nrows = $lista->num_rows;
         var id = $(this).data('id'); // Busca o id do (data-id)
         //console.log(id + ' - ' + nome); //Exibe no console
         $('span.nome').text(nome); // Insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); // Chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','tipos_excluir.php?id_tipo='+id); // Chama o arquivo php para excluir o tipo
         $('#modalEdit').modal('show')// Chamar o modal 
     });
 </script>
