@@ -45,9 +45,9 @@ $nrows = $lista->num_rows;
                              
                              <?php 
                                 if ($row['nivel_usuario']=='sup') {
-                                    echo '<span class="glyphicon glyphicon-link text-danger" aria-hidden="true"></span>';
+                                    echo '<span class="glyphicon glyphicon-king text-danger" aria-hidden="true"></span>';
                                 }else {
-                                    echo '<span class="glyphicon glyphicon-globe text-info" aria-hidden="true"></span>';
+                                    echo '<span class="glyphicon glyphicon-bishop text-info" aria-hidden="true"></span>';
                                 }
                             ?>
                             <?php echo $row['nivel_usuario']?>
